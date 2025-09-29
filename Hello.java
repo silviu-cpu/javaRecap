@@ -1,49 +1,42 @@
-class Calculator {
-    public int add(int x1, int x2) {
-        int sum = 0;
-        sum = x1 + x2;
-        return sum;
+class Computer {
+    public void playMusic() {
+        System.out.println("Music Play");
+    }
+
+    public int getMePen() {
+        return 5;
+    }
+
+    // Method Overloading concept
+    public int add(int n1, int n2, int n3) {
+        return n1 + n2 + n3;
+    }
+
+    public int add(int n1, int n2) {
+        return n1 + n2;
+    }
+
+    public double add(double n1, int n2) {
+        return n1 + n2;
     }
 }
 
 public class Hello {
     public static void main(String a[]) {
-        // int num = 20;
-        // byte b = 122;
-        // short sh = 5882;
-        // long l = 22222222223l;
-        // float f = 23.2f;
+        // sealed abstract vs non abstract
+        // Computer c1 = new Computer();
+        // c1.playMusic();
+        // System.out.println(c1.getMePen());
 
-        // char c = 'k';
-        // boolean ba = true;
-        // int num = 100_000_000;
-        // int n = 3;
-        // int result = 0;
+        int nums[] = { 4, 5, 56 };
+        int nums2[] = new int[4];
 
-        // result = n % 2 == 0 ? 10 : 20; // same js
-        // System.out.println(result);
-
-        // switch (n) {
-        // case 1:
-        // System.out.println("Ceva1");
-        // case 2:
-        // System.out.println("Ceva2");
-        // case 3:
-        // System.out.println("Ceva3");
-        // default:
-        // break;
-        // }
-
-        // int i = 1;
-        // do {
-        // System.out.println("Hi " + i);
-        // i++;
-        // } while (i <= 4);
-
-        int n1 = 3, n2 = 4;
-
-        Calculator x = new Calculator();
-        int rez = x.add(n1, n2);
-        System.out.println(rez);
+        int numsM[][] = new int[4][4];
+        for (int n[] : numsM) {
+            for (int m : n) {
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
     }
 }
